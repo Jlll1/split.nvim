@@ -6,12 +6,12 @@ Small Neovim plugin allowing for splitting a line on a sequence of characters.
 ## Installation
 Using [vim-plug](https://github.com/junegunn/vim-plug):
 ```vim
-Plug 'jinh0/eyeliner.nvim'
+Plug 'jlll1/split.nvim'
 ```
 
 Using [packer.nvim](https://github.com/wbthomason/packer.nvim):
 ```lua
-use 'jinh0/eyeliner.nvim'
+use 'jlll1/split.nvim'
 ```
 
 Using Neovim's native package system (`:h packages`)
