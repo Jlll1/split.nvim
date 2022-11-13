@@ -3,9 +3,7 @@ local M = {}
 local function split(sequence, replace_with)
   local search_reg = vim.fn.getreg('/')
   local cursor = vim.api.nvim_win_get_cursor(0)
-  pcall(vim.cmd, [[s/\s\+]] ..sequence .. '/' .. sequence ..'/g')
-  pcall(vim.cmd, 's/' ..sequence .. [[\s\+/]] .. sequence ..'/g')
-  vim.cmd('s/' .. sequence .. '/' .. replace_with .. '/g')
+  vim.cmd([[s/\s*]] .. sequence .. [[\s*/]] .. replace_with .. '/g')
   vim.fn.setreg('/', search_reg)
   vim.api.nvim_win_set_cursor(0, cursor)
 end
